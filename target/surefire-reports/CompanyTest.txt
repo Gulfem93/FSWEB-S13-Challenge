@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: CompanyTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.22 s <<< FAILURE! - in CompanyTest
+testEmployeeInstanceTypes  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: an instance of [Ljava.lang.String;
+     but: null
+	at CompanyTest.testEmployeeInstanceTypes(CompanyTest.java:88)
+

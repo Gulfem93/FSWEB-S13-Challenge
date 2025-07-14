@@ -1,7 +1,7 @@
 import org.example.Company;
 import org.example.Employee;
 import org.example.Healthplan;
-import org.example.enums.Plan;
+import org.example.Plan;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -85,18 +85,18 @@ public class CompanyTest {
     public void testEmployeeInstanceTypes() throws NoSuchFieldException {
         assertThat(employee.getFullName(), instanceOf(String.class));
         assertThat(employee.getEmail(), instanceOf(String.class));
-        assertThat(employee.getHealthPlans(), instanceOf(String[].class));
+        assertThat(employee.getHealthPlan(), instanceOf(String[].class));
     }
 
     @DisplayName("addHealthplan method başarılı çalışıyor mu?")
     @Test
     public void testAddHealthplanMethod() throws NoSuchFieldException {
         employee.addHealthPlan(-1, "Test Sigorta");
-        assertEquals(!Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
+        assertEquals(!Arrays.asList(employee.getHealthPlan()).contains("Test Sigorta"), true);
         employee.addHealthPlan(0, "Test Sigorta");
-        assertEquals(!Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
+        assertEquals(!Arrays.asList(employee.getHealthPlan()).contains("Test Sigorta"), true);
         employee.addHealthPlan(1, "Test Sigorta");
-        assertEquals(Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
+        assertEquals(Arrays.asList(employee.getHealthPlan()).contains("Test Sigorta"), true);
     }
 
     @DisplayName("Company sınıf değişkenleri doğru access modifier a sahip mi ?")
